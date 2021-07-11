@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+      <span style="display:flex;"><h1 style="margin: 0px 0px 20px 45px; font-size: 50px;">Covid-19 Vaccination</h1>
+      <p style="margin: 17px 0px 10px 38%;"><button style="margin-right: 10px;" onclick="window.location.href='https://selfregistration.cowin.gov.in/'" class="btn">Register now</button>In India</p></span>
+    <ul>
+        <li style="margin-left: 4%;"><div class="btn1"></div></li>
+        <li style="margin-left: 16%;"><div class="btn2"></div></li>
+        <li style="margin-left: 16%;"><div class="btn3"></div></li>
+    </ul>
+   
+    </nav>
+    <hr style="margin-top: -50px;">
+    <br><br><br>
+    <h1 style="font-size: 45px;margin: 0px 0px 20px 45px; ">Coronavirus Vaccination Status</h1><br><br>
+    <span style="display: flex; margin-left: 4%;">
+      <div> <img src="vaccine.jpg" alt=""></div>
+  <div> <p>25.1% of the world population has received at least one dose of a COVID-19 vaccine.</p><br>
+       <p>3.39 billion doses have been administered globally, and 31.46 million are now administered each day.</p><br>
+       <p> Only 1% of people in low-income countries have received at least one dose</p></div> 
+      </span><br><br><br>
+       <hr><br>
+       <h2 style="margin-left: 30px;"><p style=" font-size: 60px;">Content</p> 
+      <p style="margin-top: 20px;  font-size: 50px;">Vaccination statistics accordingly</p></h2>
+
+       <ul style="display: block; margin-left: 10%; margin-top:2%">
+         <li class="link" style="font-size: 50px;"><a  href="#dose">Doses</a> </li>
+         <li class="link" style="font-size: 50px;"><a  href="#btn">Age</a> </li>
+         <li class="link" style="font-size: 50px;"><a  href="#btn">Gender</a> </li>
+         <li class="link" style="font-size: 50px;"><a  href="#types">Types</a> </li><br><br>
+        
+       </ul><hr>
+    <h4 id="dose" class="dose" style="    margin: 10px 0px 20px 40px;">Vaccination Doses</h4>
+    <!-- <p style="margin-left: 4%;"> Percentage of vaccination in India</p> -->
+    <span style="display: flex;">
+        <h4 style="margin-left: 4%; margin-top: 60px;">Dose1<br>21.9%</h4>
+       <h4 style="margin: 60px 200px 0px 100px;;">Dose2<br>5.9%</h4>
+       <iframe style="width: 700px; height: 500px; margin-left: 12%; border-radius: 5px;" src="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&pickerSort=desc&pickerMetric=population&hideControls=true&Metric=People+vaccinated+%28by+dose%29&Interval=Cumulative&Relative+to+Population=false&Align+outbreaks=false&country=BHR~BRA~CHL~FRA~DEU~HUN~IND~ISR~SRB~TUR~GBR~USA~URY~ESP~ITA~ARE~MEX~RUS" frameborder="3px"></iframe>
+        <!-- <div id="curve_chart" style="width: 900px; height: 500px; float: right; margin: 20px 5px 0 0;"></div> -->
+</span>
+<br><br>
+<b><hr></b><br>
+<button id="btn" class="btn" style="justify-content: center; margin-left: 40%;" onclick="trends()">Vaccination trends</button>
+<span style="display: flex;">
+    <div style="position: relative;">
+    <div style= "position: absolute;background-color: rgb(173, 95, 95); box-shadow: 3px 3px 3px 1px black; height:400px; width: 500px; margin-top:90px;margin-left: 11%;" id="apara">
+<h4 style="margin: 0px 100px 0 130px; color: whitesmoke;" >Vaccination Doses by Age</h4> 
+  <p style="margin-left: 4%; margin-top: 30px; color: whitesmoke;">Vaccination process is divided in three age groups</p>
+  
+  <ol style="margin-left: 10%;">
+      <li style="color: whitesmoke;">18-44</li>
+      <li style="color: whitesmoke;">45-60</li>
+      <li style="color: whitesmoke;">Above 60</li>
+  </ol></div>
+  <div style="z-index: 10;background-color: rgb(187, 75, 75); opacity: 0;color: whitesmoke; box-shadow: 3px 3px 3px 1px black; height:400px; width: 500px; margin-top:90px;margin-left: 11%;" id="genpara">
+    <h4 style="margin: 60px 0px 20px 40px;" >Vaccination Doses by Gender</h4> 
+    <ol style="margin-left: 10%;">
+        <li id="gender" style="color: whitesmoke;">Female: 6875466</li>
+        <li style="color: rgb(207, 177, 177);">Male:8798765</li>
+    </ol></div>
+ 
+</div>
+  <div class="container" style=" position: relative;     margin: 55px 0 0 98px;">
+    <div id="piechart_3d" class="piechart_3d" style="width: 700px; height: 500px;margin-left: 120px; position: absolute; box-shadow: 7px 7px 7px black;"></div>
+    <div id="donutchart" style="width: 700px; height: 500px;margin-left: 150px; box-shadow: 7px 7px 7px rgb(83, 5, 5); opacity: 0; z-index: 10;"></div>
+  </div>
+</span><br>
+<hr>
+<br><br> <h4 id="types"  style="    margin: 10px 0px 20px 40px;">Vaccines approved all over the world</h4>
+<span style="display: flex; margin: 100px 4% 40px 40px;">
+  <div id="chart_div" style="width: 900px; height: 500px; box-shadow: 7px 7px 7px black;"></div>
+<div style="margin-left: 100px; margin-top: 4%;">
+
+  </table>
+  <table  style="width:100%; margin-top: 50px;">
+    <tr>
+      <th>Vaccine</th>
+      <th>Registered(in million)</th>
+    </tr>
+    <tr>
+      <td>Oxford Astrazeneca</td>
+      <td>985.63</td>
+    </tr>
+    <tr>
+      <td>Pfizer-BioNTech</td>
+      <td>784.47</td>
+    </tr>
+    <tr>
+      <td>Johnson & Johnson</td>
+      <td>312.75</td>
+    </tr>
+    <tr>
+      <td>Moderna</td>
+      <td>548.49</td>
+    </tr>
+    <tr>
+      <td>Sputnik V</td>
+      <td>498.24</td>
+    </tr>
+    <tr>
+      <td>Covaxin</td>
+      <td>370.8</td>
+    </tr>
+  </table>
+</div>
+</span><br><br><hr>
+<div style="display: flex; justify-content: center; background-color: #3bd9d9; height: 200px; padding-top: 40px;">
+<img src="logo.png" alt="">
+  <p style="font-size: 70px; margin-top: 50px;">Stay home, Stay safe</p>
+  <br><br><br>
+  
+</div>
+<div style="background-color:#3bd9d9; ;">&#169; Taniya </div>
+ 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      google.charts.setOnLoadCallback(Chart);
+      google.charts.setOnLoadCallback(holeChart);
+  
+      function Chart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Age', 'Vaccine'],
+          ['18-44',  67986],
+          ['45-60',      76468],
+          ['Above 60',  82974],
+        ]);
+
+        var options = {
+          title: 'Vaccination by Age',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+
+      function holeChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Gender', 'Vaccine'],
+          ['Male',   98474],
+          ['Female',  67449],
+          ['Other',  2],
+        
+        ]);
+
+        var options = {
+          title: 'Vaccination by Gender',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+
+      function drawChart() {
+
+var data = new google.visualization.DataTable();
+data.addColumn('string', 'Pizza');
+data.addColumn('number', 'Populartiy');
+data.addRows([
+  ['Oxford Astrazeneca', 985.63],
+  ['Pfizer-BioNTech', 784.47],
+  ['Johnson & Johnson', 312.75],
+  ['Moderna', 548.49], // Below limit.
+  ['Sputnik V', 498.24] // Below limit.
+]);
+
+var options = {
+  title: 'Vaccine Types',
+  sliceVisibilityThreshold: .2
+};
+
+var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+chart.draw(data, options);
+}  
+
+function trends(){
+    let btn = document.getElementById('btn');
+    let age = document.getElementById("piechart_3d");
+    let gender = document.getElementById('donutchart');
+    let agepara = document.getElementById('apara');
+    let genpara = document.getElementById('genpara');
+    if(age.style.opacity != '0' && gender.style.opacity == '0' && agepara.style.opacity != '0' && genpara.style.opacity == '0'){
+        age.style.opacity = '0';
+        gender.style.opacity = '100%';
+        agepara.style.opacity = '0';
+        genpara.style.opacity = '100%';
+        agepara.style.transition = '0.5s';
+        genpara.style.transition = '0.5s';
+        age.style.transition = '0.5s';
+        gender.style.transition = '0.5s';
+    }else{
+        age.style.opacity = '100%';
+        gender.style.opacity = '0';
+        agepara.style.opacity = '100%';
+        genpara.style.opacity = '0';
+    }
+}
+
+let anchorSelector = 'a[href^="#"]';
+      
+        // Collect all such anchor links
+        let anchorList = 
+            document.querySelectorAll(anchorSelector);
+          
+        // Iterate through each of the links
+        anchorList.forEach(link => {
+            link.onclick = function (e) {
+      
+                // Prevent scrolling if the
+                // hash value is blank
+                e.preventDefault();
+          
+                // Get the destination to scroll to
+                // using the hash property
+                let destination = 
+                    document.querySelector(this.hash);
+          
+                // Scroll to the destination using
+                // scrollIntoView method
+                destination.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    </script>
+</body>
+</html>
